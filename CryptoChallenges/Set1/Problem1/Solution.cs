@@ -12,7 +12,7 @@ namespace CryptoChallenges.Set1.Problem1
 
             const string expected = "SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t";
 
-            var encoded = Convert.ToBase64String(HexString.ToByteArray(input));
+            var encoded = HexString.Base64Encode(input);
 
             Console.WriteLine("Expected: {0}", expected);
             Console.WriteLine("Result: {0}", encoded);
