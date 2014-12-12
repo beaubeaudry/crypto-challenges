@@ -8,6 +8,15 @@ namespace CryptoChallenges.Set1
     /// </summary>
     public static class HexString
     {
+        /// <summary>
+        /// Converts a hex string into it's equlivant byte values and Base64 encodes the resulting bytes.
+        /// </summary>
+        /// <param name="value">A string in hexidecimal format (e.g. "11AABBCCDD")</param>
+        public static string Base64Encode(string value)
+        {
+            return Convert.ToBase64String(ToByteArray(value));
+        }
+
         /// <summary> Returns a byte array from a hex string.</summary>
         /// <param name="value">A string in hexidecimal format (e.g. "11AABBCCDD")</param>
         public static byte[] ToByteArray(string value)
