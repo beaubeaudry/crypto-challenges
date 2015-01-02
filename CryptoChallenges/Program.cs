@@ -11,7 +11,7 @@ namespace CryptoChallenges
     {
         static void Main(string[] args)
         {
-            Set1.Problem1.Solve();
+            Set1.Problem2.Solve();
         }
     }
 }
