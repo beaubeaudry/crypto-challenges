@@ -50,10 +50,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="HexStringTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Set1Tests\" />
+    <ProjectReference Include="..\CryptoChallenges\CryptoChallenges.csproj">
+      <Project>{8c2895a7-92b6-4fb8-a789-181cd8034431}</Project>
+      <Name>CryptoChallenges</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
