@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
 
-namespace CryptoChallenges.Set1.Problem1
+namespace CryptoChallenges.Set1
 {
-    public class Solution
+    public static class Problem1
     {
         public static void Solve()
         {

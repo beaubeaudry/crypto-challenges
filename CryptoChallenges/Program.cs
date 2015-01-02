@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CryptoChallenges.Set1.Problem1;
+using CryptoChallenges.Set1;
 
 namespace CryptoChallenges
 {
@@ -11,7 +11,7 @@ namespace CryptoChallenges
     {
         static void Main(string[] args)
         {
-            Set1.Problem1.Solution.Solve();
+            Set1.Problem1.Solve();
         }
     }
 }
