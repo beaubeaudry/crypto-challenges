@@ -41,8 +41,6 @@ namespace CryptoChallenges.Set1
         /// <summary>
         /// Converts the value of each element to it's hexidecimal string representation
         /// </summary>
-        /// <param name="buffer">An array of bytes</param> 
-        /// <returns></returns>
         internal static string FromByteArray(byte[] buffer)
         {
             return BitConverter.ToString(buffer).Replace("-", "");
