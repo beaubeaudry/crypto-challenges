@@ -12,14 +12,14 @@ namespace CryptoChallenges.Set1
         /// Converts a hex string into it's equlivant byte values and Base64 encodes the resulting bytes.
         /// </summary>
         /// <param name="value">A string in hexidecimal format (e.g. "11AABBCCDD")</param>
-        public static string Base64Encode(string value)
+        internal static string Base64Encode(string value)
         {
             return Convert.ToBase64String(ToByteArray(value));
         }
 
         /// <summary> Returns a byte array from a hex string.</summary>
         /// <param name="value">A string in hexidecimal format (e.g. "11AABBCCDD")</param>
-        public static byte[] ToByteArray(string value)
+        internal static byte[] ToByteArray(string value)
         {
             // We read two characters at a time so we must have an even
             // number of bytes.
@@ -43,7 +43,7 @@ namespace CryptoChallenges.Set1
         /// </summary>
         /// <param name="buffer">An array of bytes</param> 
         /// <returns></returns>
-        public static string FromByteArray(byte[] buffer)
+        internal static string FromByteArray(byte[] buffer)
         {
             return BitConverter.ToString(buffer).Replace("-", "");
         }
