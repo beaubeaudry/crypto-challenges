@@ -21,6 +21,7 @@ namespace CryptoChallengesTests
         [TestMethod]
         public void XORArray_ThreeBytes()
         {
+            // XOR result of hex 11 and 44 is 55
             byte[] first = { 0x11, 0x11, 0x11 };
             byte[] second = { 0x11, 0x11, 0x44 };
             byte[] expected = { 0x00, 0x00, 0x55 };

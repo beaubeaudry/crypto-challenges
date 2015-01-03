@@ -6,7 +6,7 @@ namespace CryptoChallengesTests
     public class Set1Tests
     {
         [TestMethod]
-        public void Problem1_Solve_ResultMatchesExpected()
+        public void Problem1_Solve()
         {
             const string input =
                 "49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d";
@@ -18,7 +18,7 @@ namespace CryptoChallengesTests
         }
 
         [TestMethod]
-        public void Problem2_Solve_ResultMatchesExpected()
+        public void Problem2_Solve()
         {
             const string first = "1c0111001f010100061a024b53535009181c";
             const string second = "686974207468652062756c6c277320657965";
