@@ -14,9 +14,9 @@ namespace CryptoChallenges.Set1
 
             var result = new byte[a.Length];
 
-            for (int i = 0; i < a.Length-1; i++)
+            for (int i = 0; i < a.Length; i++)
             {
-                result[i] = (byte)(a[i] ^ b[i]);
+                result[i] = (byte) (a[i] ^ b[i]);
             }
 
             return result;

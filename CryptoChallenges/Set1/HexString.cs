@@ -39,7 +39,8 @@ namespace CryptoChallenges.Set1
         }
 
         /// <summary>
-        /// Converts the value of each element to it's hexidecimal string representation
+        /// Converts the value of each element to it's hexidecimal string representation.
+        /// <remarks>Returns hex digits in all upper case.</remarks>
         /// </summary>
         public static string FromByteArray(byte[] buffer)
         {
