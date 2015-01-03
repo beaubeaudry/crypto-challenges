@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Set1\Bitwise.cs" />
     <Compile Include="Set1\HexString.cs" />
     <Compile Include="Set1\Problem1.cs" />
     <Compile Include="Set1\Problem2.cs" />

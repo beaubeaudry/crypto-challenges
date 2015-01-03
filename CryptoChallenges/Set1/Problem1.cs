@@ -3,7 +3,7 @@ using System.IO;
 
 namespace CryptoChallenges.Set1
 {
-    public static class Problem1
+    internal static class Problem1
     {
         public static void Solve()
         {

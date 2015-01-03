@@ -6,7 +6,7 @@ namespace CryptoChallenges.Set1
     /// <summary> 
     /// A collection of utilities for working with hex strings.
     /// </summary>
-    public static class HexString
+    internal static class HexString
     {
         /// <summary>
         /// Converts a hex string into it's equlivant byte values and Base64 encodes the resulting bytes.
