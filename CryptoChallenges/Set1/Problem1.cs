@@ -5,17 +5,9 @@ namespace CryptoChallenges.Set1
 {
     public static class Problem1
     {
-        public static void Solve()
+        public static string Solve(string input)
         {
-            const string input =
-               "49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d";
-
-            const string expected = "SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t";
-
-            var encoded = HexString.Base64Encode(input);
-
-            Console.WriteLine("Expected: {0}", expected);
-            Console.WriteLine("Result: {0}", encoded);
+            return HexString.Base64Encode(input);
         }
     }
 }
