@@ -1,7 +1,4 @@
-﻿using System;
-using CryptoChallenges.Set1;
-
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CryptoChallengesTests
 {

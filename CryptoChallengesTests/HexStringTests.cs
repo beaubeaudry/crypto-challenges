@@ -1,5 +1,4 @@
-﻿using System.Net.Configuration;
-using CryptoChallenges.Set1;
+﻿using CryptoChallenges.Set1;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
