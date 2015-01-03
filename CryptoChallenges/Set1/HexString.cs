@@ -6,20 +6,20 @@ namespace CryptoChallenges.Set1
     /// <summary> 
     /// A collection of utilities for working with hex strings.
     /// </summary>
-    internal static class HexString
+    public static class HexString
     {
         /// <summary>
         /// Converts a hex string into it's equlivant byte values and Base64 encodes the resulting bytes.
         /// </summary>
         /// <param name="value">A string in hexidecimal format (e.g. "11AABBCCDD")</param>
-        internal static string Base64Encode(string value)
+        public static string Base64Encode(string value)
         {
             return Convert.ToBase64String(ToByteArray(value));
         }
 
         /// <summary> Returns a byte array from a hex string.</summary>
         /// <param name="value">A string in hexidecimal format (e.g. "11AABBCCDD")</param>
-        internal static byte[] ToByteArray(string value)
+        public static byte[] ToByteArray(string value)
         {
             // We read two characters at a time so we must have an even
             // number of bytes.
@@ -41,7 +41,7 @@ namespace CryptoChallenges.Set1
         /// <summary>
         /// Converts the value of each element to it's hexidecimal string representation
         /// </summary>
-        internal static string FromByteArray(byte[] buffer)
+        public static string FromByteArray(byte[] buffer)
         {
             return BitConverter.ToString(buffer).Replace("-", "");
         }

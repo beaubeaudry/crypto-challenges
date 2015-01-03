@@ -2,13 +2,13 @@
 
 namespace CryptoChallenges.Set1
 {
-    internal class Bitwise
+    public class Bitwise
     {
 
         /// <summary>
         /// Returns the XOR combination of two buffers.
         /// </summary>
-        internal static byte[] XORArray(byte[] a, byte[] b)
+        public static byte[] XORArray(byte[] a, byte[] b)
         {
             if (a.Length != b.Length)
                 throw new ArgumentException("Both arrays must be the same length");
