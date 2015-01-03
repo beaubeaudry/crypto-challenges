@@ -4,7 +4,6 @@ namespace CryptoChallenges.Set1
 {
     public class Bitwise
     {
-
         /// <summary>
         /// Returns the XOR combination of two buffers.
         /// </summary>
@@ -15,7 +14,7 @@ namespace CryptoChallenges.Set1
 
             var result = new byte[a.Length];
 
-            for (int i = 0; i < a.Length; i++)
+            for (int i = 0; i < a.Length-1; i++)
             {
                 result[i] = (byte)(a[i] ^ b[i]);
             }
