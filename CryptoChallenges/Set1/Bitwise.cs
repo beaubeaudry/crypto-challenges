@@ -21,5 +21,22 @@ namespace CryptoChallenges.Set1
 
             return result;
         }
+
+
+        /// <summary>
+        /// Returns a copy of the array XORed by the given byte.
+        /// </summary>
+        public static byte[] XORArray(byte[] array, byte b)
+        {
+            var result = new byte[array.Length];
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                result[i] = (byte)(array[i] ^ b);
+            }
+
+            return result;
+        }
+
     }
 }
