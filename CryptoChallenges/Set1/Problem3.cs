@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Net.Configuration;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace CryptoChallenges.Set1
 {
@@ -11,18 +8,12 @@ namespace CryptoChallenges.Set1
     {
         public static string Solve(string input)
         {
-            var scoreResults = XORnScore(input);
+            double topScore = 0.0;
+            string topString = "";
 
-            var top = scoreResults.OrderByDescending(result => result.Score).First();
-
-            return top.Value;
-        }
-
-        private static IEnumerable<ScoreResult> XORnScore(string input)
-        {
-            // Assume the input is a hex string and take it's equalivent bytes.
+            // 
             var bytes = HexString.ToByteArray(input);
-
+            
             // For each potential key value we XOR the input string by the
             // key, convert back to a string, and return the scored result.
             for (var key = byte.MinValue; key < byte.MaxValue; key++)
@@ -30,27 +21,21 @@ namespace CryptoChallenges.Set1
                 byte[] xoredBytes = Bitwise.XORArray(bytes, key);
                 string xoredString = Encoding.ASCII.GetString(xoredBytes);
                 double score = ScoreString(xoredString);
-                yield return new ScoreResult(key, xoredString, score);
-            }
-        }
 
-        private struct ScoreResult
-        {
-            public ScoreResult(byte key, string value, double score)
-            {
-                Key = key;
-                Value = value;
-                Score = score;
+                if (score > topScore)
+                {
+                    topScore = score;
+                    topString = xoredString;
+                }
             }
-           
-            public readonly byte Key;
-            public readonly string Value;
-            public readonly double Score;
-        }
 
+            return topString;
+        }
+        
+        // Case-insensitive. 
         public static double ScoreString(string input)
         {
-            // This produces the sum of the scores for each character. Case-insensitive. 
+            // This produces the sum of the scores for each character. 
             return input.ToLower().Where(CharacterScores.ContainsKey).Sum(c => CharacterScores[c]);
         }
 
