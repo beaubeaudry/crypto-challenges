@@ -49,12 +49,10 @@
     <Compile Include="Set1\Problem2.cs" />
     <Compile Include="Set1\Problem3.cs" />
     <Compile Include="Set1\Problem4.cs" />
+    <Compile Include="Set1\StringScorer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Set1\Problem4Data.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
