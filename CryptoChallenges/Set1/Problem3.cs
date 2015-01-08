@@ -16,7 +16,7 @@ namespace CryptoChallenges.Set1
             
             // For each potential key value we XOR the input string by the
             // key, convert back to a string, and return the scored result.
-            for (var key = byte.MinValue; key < byte.MaxValue; key++)
+            for (byte key = 0; key < 255; key++)
             {
                 byte[] xoredBytes = Bitwise.XORArray(bytes, key);
                 string xoredString = Encoding.ASCII.GetString(xoredBytes);
