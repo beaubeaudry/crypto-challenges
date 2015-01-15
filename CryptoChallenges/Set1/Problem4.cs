@@ -1,6 +1,7 @@
 ﻿
 namespace CryptoChallenges.Set1
 {
+    // Single-byte XOR cipher.
     public static class Problem4
     {
         public static string Solve()

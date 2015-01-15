@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace CryptoChallenges.Set1
 {
+    // Single-byte XOR cipher.
     public static class Problem3
     {
         public static string Solve(string input)
