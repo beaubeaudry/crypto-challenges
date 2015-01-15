@@ -2,6 +2,7 @@
 
 namespace CryptoChallenges.Set1
 {
+    //Implement repeating-key XOR.
     public static class Problem5
     {
         public static string Solve(string input, string key)

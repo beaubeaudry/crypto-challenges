@@ -2,6 +2,7 @@
 
 namespace CryptoChallenges.Set1
 {
+    // Fixed XOR: Write a function that takes two equal-length buffers and produces their XOR combination.
     public static class Problem2
     {
         public static string Solve(string first, string second)
