@@ -63,5 +63,13 @@ namespace CryptoChallengesTests
 
             Assert.AreEqual(expected, result);
         }
+
+        [TestMethod]
+        public void Problem6_Solve()
+        {
+            var result = CryptoChallenges.Set1.Problem6.Solve();
+
+            Assert.Inconclusive();
+        }
     }
 }
