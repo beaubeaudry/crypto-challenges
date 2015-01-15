@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace CryptoChallenges.Set1
 {
@@ -21,12 +22,21 @@ namespace CryptoChallenges.Set1
 
             return result;
         }
-
-
+        
         /// <summary>
-        /// Returns a copy of the array XORed by the given byte.
+        /// Returns a copy of a string XORed by a given byte.
         /// </summary>
-        public static byte[] XORArray(byte[] array, byte b)
+        public static string SingleByteXOR(string value, byte key)
+        {
+            byte[] bytes = HexString.ToByteArray(value);
+            byte[] xored = SingleByteXOR(bytes, key);
+            return Encoding.ASCII.GetString(xored);
+        }
+        
+        /// <summary>
+        /// Returns a copy of an array XORed by a given byte.
+        /// </summary>
+        public static byte[] SingleByteXOR(byte[] array, byte b)
         {
             var result = new byte[array.Length];
 
@@ -37,6 +47,5 @@ namespace CryptoChallenges.Set1
 
             return result;
         }
-
     }
 }
