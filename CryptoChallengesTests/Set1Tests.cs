@@ -40,5 +40,15 @@ namespace CryptoChallengesTests
 
             Assert.AreEqual(expected, result);
         }
+
+        [TestMethod]
+        public void Problem4_Solve()
+        {
+            const string expected = "Now that the party is jumping\n";
+
+            var result = CryptoChallenges.Set1.Problem4.Solve();
+
+            Assert.AreEqual(expected, result);
+        }
     }
 }
