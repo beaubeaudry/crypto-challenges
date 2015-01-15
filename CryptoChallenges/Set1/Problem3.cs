@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace CryptoChallenges.Set1
 {
     public static class Problem3
@@ -8,7 +10,7 @@ namespace CryptoChallenges.Set1
             double topScore = 0.0;
             string bestResult = "";
 
-            foreach (string permutation in Permutations.SingleByteXOR(input))
+            foreach (string permutation in SingleByteXOR(input))
             {
                 double score = StringScorer.ScoreByLetterFrequency(permutation);
                 if (score > topScore)
@@ -19,6 +21,15 @@ namespace CryptoChallenges.Set1
             }
 
             return bestResult;
+        }
+
+        // XOR a string by each byte from 0 to 255 and return each result.
+        private static IEnumerable<string> SingleByteXOR(string value)
+        {
+            for (byte key = 0; key < 255; key++)
+            {
+                yield return Bitwise.SingleByteXOR(value, key);
+            }
         }
     }
 }
