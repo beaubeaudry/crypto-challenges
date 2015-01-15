@@ -47,5 +47,23 @@ namespace CryptoChallenges.Set1
 
             return result;
         }
+
+        public static byte[] RepeatingByteXOR(string value, string key)
+        {
+            return RepeatingByteXOR(Encoding.ASCII.GetBytes(value), Encoding.ASCII.GetBytes(key));
+        }
+
+        /// <summary>
+        /// XOR each byte in the input array by each repeating byte of the key.
+        /// </summary>
+        public static byte[] RepeatingByteXOR(byte[] array, byte[] key)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] ^= key[i % key.Length];
+            }
+
+            return array;
+        }
     }
 }
