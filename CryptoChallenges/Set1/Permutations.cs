@@ -3,7 +3,7 @@
 namespace CryptoChallenges.Set1
 {
         /// <summary>
-        /// Utility class to generate permutations.
+        /// Utility class for generating permutations.
         /// </summary>
         public static class Permutations
         {
