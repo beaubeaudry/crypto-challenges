@@ -1,36 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace CryptoChallenges.Set1
 {
     public static class Problem4
     {
-        public static void Solve()
+        public static string Solve()
         {
-            var lines = File.ReadAllLines("Problem4Data.txt");
-            Console.WriteLine(lines[0]);
+            double maxScore = 0;
+            string bestResult = "";
 
-            return;
+            foreach (var line in Data)
+            {
+                // This problem just builds on Problem 3.
+                string topPermutation = Problem3.Solve(line);
 
-            //var top = new List<string>();
+                double score = StringScorer.ScoreByLetterFrequency(topPermutation);
 
-            //foreach (var s in lines)
-            //{
-            //    top.Add(TopFromXors(s, 1).FirstOrDefault());
-            //}
+                if (score > maxScore)
+                {
+                    maxScore = score;
+                    bestResult = topPermutation;
+                }
+            }
 
-            //foreach (var s in top.OrderBy(Helpers.ScoreString))
-            //{
-            //    Console.WriteLine("{0}\t{1}", Helpers.ScoreString(s), s);
-            //}
+            return bestResult;
         }
 
         #region Data
-        private static string[] Data =
+        private static readonly string[] Data =
         {
             "0e3647e8592d35514a081243582536ed3de6734059001e3f535ce6271032",
             "334b041de124f73c18011a50e608097ac308ecee501337ec3e100854201d",
