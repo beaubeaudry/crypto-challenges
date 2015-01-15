@@ -51,6 +51,7 @@
     <Compile Include="Set1\Problem4.cs" />
     <Compile Include="Set1\Problem6.cs" />
     <Compile Include="Set1\Problem5.cs" />
+    <Compile Include="Set1\StringConverter.cs" />
     <Compile Include="Set1\StringScorer.cs" />
   </ItemGroup>
   <ItemGroup>
