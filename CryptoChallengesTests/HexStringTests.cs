@@ -47,25 +47,5 @@ namespace CryptoChallengesTests.HexStringTests
             const string input = "111";
             byte[] result = HexString.ToByteArray(input);
         }
-
-        [TestMethod]
-        public void FromByteArray_EmptyArray_ExpectEmptyString()
-        {
-            byte[] input = new byte[0];
-
-            string result = HexString.FromByteArray(input);
-
-            Assert.AreEqual(result, "");
-        }
-
-        [TestMethod]
-        public void FromByteArray_EvenCharacters_ExpectMatchingString()
-        {
-            byte[] input = {0x11, 0x22};
-
-            string result = HexString.FromByteArray(input);
-
-            Assert.AreEqual(result, "1122");
-        }
     }
 }

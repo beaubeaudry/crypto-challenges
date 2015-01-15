@@ -11,7 +11,7 @@ namespace CryptoChallenges.Set1
 
             var xored = Bitwise.XORArray(firstBytes, secondBytes);
 
-            return HexString.FromByteArray(xored).ToLower();
+            return StringConverter.FromBytes(xored).ToLower();
         }
     }
 }

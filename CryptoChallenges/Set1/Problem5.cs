@@ -8,13 +8,7 @@ namespace CryptoChallenges.Set1
         {
             var encoded = Bitwise.RepeatingByteXOR(input, key);
 
-            return ByteArrayToString(encoded);
-        }
-
-        public static string ByteArrayToString(byte[] ba)
-        {
-            string hex = BitConverter.ToString(ba);
-            return hex.Replace("-", "");
+            return StringConverter.FromBytes(encoded);
         }
     }
 }
