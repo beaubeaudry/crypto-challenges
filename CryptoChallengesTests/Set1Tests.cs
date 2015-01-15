@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using CryptoChallenges.Set1;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CryptoChallengesTests
 {
@@ -70,6 +71,19 @@ namespace CryptoChallengesTests
             var result = CryptoChallenges.Set1.Problem6.Solve();
 
             Assert.Inconclusive();
+        }
+
+        [TestMethod]
+        public void HammingDistance_Calculate_Strings()
+        {
+            string first = "this is a test";
+            string second = "wokka wokka!!!";
+
+            int expected = 37;
+
+            var result = HammingDistance.Find(first, second);
+
+            Assert.AreEqual(expected, result);
         }
     }
 }
