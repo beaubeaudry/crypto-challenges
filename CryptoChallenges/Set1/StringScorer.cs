@@ -5,7 +5,9 @@ namespace CryptoChallenges.Set1
 {
     public static class StringScorer
     {
-        // Score a string by counting letter frequency. More common letters are weighted higher. Case-insensitive. 
+        /// <summary>
+        /// Score a string by counting letter frequency. More common letters are weighted higher. Case-insensitive.
+        /// </summary>
         public static double ScoreByLetterFrequency(string input)
         {
             // This produces the sum of the scores for each character. 
