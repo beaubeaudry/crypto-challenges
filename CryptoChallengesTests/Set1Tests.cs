@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using CryptoChallenges.Set1;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CryptoChallengesTests
 {
@@ -26,6 +27,61 @@ namespace CryptoChallengesTests
             const string expected = "746865206b696420646f6e277420706c6179";
 
             var result = CryptoChallenges.Set1.Problem2.Solve(first, second);
+
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void Problem3_Solve()
+        {
+            const string input = "1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736";
+            const string expected = "Cooking MC's like a pound of bacon";
+
+            var result = CryptoChallenges.Set1.Problem3.Solve(input);
+
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void Problem4_Solve()
+        {
+            const string expected = "Now that the party is jumping\n";
+
+            var result = CryptoChallenges.Set1.Problem4.Solve();
+
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void Problem5_Solve()
+        {
+            string input = "Burning 'em, if you ain't quick and nimble\nI go crazy when I hear a cymbal";
+            string key = "ICE";
+            var expected = "0b3637272a2b2e63622c2e69692a23693a2a3c6324202d623d63343c2a26226324272765272" +
+                           "a282b2f20430a652e2c652a3124333a653e2b2027630c692b20283165286326302e27282f";
+
+            var result = CryptoChallenges.Set1.Problem5.Solve(input, key).ToLower();
+
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void Problem6_Solve()
+        {
+            var result = CryptoChallenges.Set1.Problem6.Solve();
+
+            Assert.Inconclusive();
+        }
+
+        [TestMethod]
+        public void HammingDistance_Calculate_Strings()
+        {
+            string first = "this is a test";
+            string second = "wokka wokka!!!";
+
+            int expected = 37;
+
+            var result = HammingDistance.Find(first, second);
 
             Assert.AreEqual(expected, result);
         }
